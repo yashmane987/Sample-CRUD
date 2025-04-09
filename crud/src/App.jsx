@@ -58,7 +58,7 @@ function App() {
       .get(`https://localhost:7059/api/Employee/${id}`)
       .then((result) => {
         setEditName(result.data.name);
-        setEditNumber(result.data.number);
+        setEditNumber(result.data.phone);
         setEditEmail(result.data.email);
         setEditId(id);
       })
@@ -88,7 +88,7 @@ function App() {
     const data = {
       id: editID,
       name: editname,
-      number: editnumber,
+      phone: editnumber,
       email: editemail,
     };
     axios
@@ -108,7 +108,7 @@ function App() {
     const url = "https://localhost:7059/api/Employee";
     const data = {
       name: name,
-      number: number,
+      phone: number,
       email: email,
     };
     axios
